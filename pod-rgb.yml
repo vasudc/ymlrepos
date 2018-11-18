@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: red-pods
+  labels:
+    colour: red
+spec:
+  containers:
+    -
+      name: red-nginx
+      image: nginx
+      ports:
+      - containerPort: 22
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: green-pods
+  labels:
+    colour: green
+
+spec:
+  containers:
+    - name: green-nginx
+      image: nginx
+      ports:
+      - containerPort: 22
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: blue-pods
+  labels:
+    colour: blue
+
+spec:
+  containers:
+    - name: blue-nginx
+      image: nginx
+      ports:
+      - containerPort: 22
